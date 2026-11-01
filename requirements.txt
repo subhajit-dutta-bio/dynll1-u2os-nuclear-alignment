@@ -1,0 +1,14 @@
+numpy
+scipy
+pandas
+pyarrow
+matplotlib
+requests
+Pillow
+lxml
+tifffile
+scikit-image
+scikit-learn
+openpyxl
+python-docx
+pypdf

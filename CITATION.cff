@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this data and analysis release."
+title: "DYNLL1 targeting and nuclear alignment in U2OS"
+version: 1.0.0
+date-released: 2026-11-01
+authors:
+  - family-names: Dutta
+    given-names: Subhajit
+doi: 10.5281/zenodo.23850589
+repository-code: https://github.com/subhajit-dutta-bio/dynll1-u2os-nuclear-alignment
+license: MIT

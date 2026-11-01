@@ -1,0 +1,9 @@
+"""Verify the provenance of gene-position proxies without spatial outcomes."""
+from pathlib import Path
+import json,hashlib
+import pandas as pd,numpy as np
+P=Path(__file__).resolve().parent;ROOT=P.parent
+def main():
+    source=ROOT/'phase10/data/Brunello_official_library.txt';lib=pd.read_csv(source,sep='\t',low_memory=False);lib=lib[lib['Target Gene ID'].notna()&lib['Genomic Sequence'].str.startswith('NC_',na=False)].copy();unique=lib.groupby('Target Gene ID')['Genomic Sequence'].nunique();lib=lib[lib['Target Gene ID'].map(unique).eq(1)];coords=lib.groupby('Target Gene ID').agg(chrom=('Genomic Sequence','first'),position=('Position of Base After Cut (1-based)','median')).reset_index().rename(columns={'Target Gene ID':'entrez'});context=pd.read_csv(ROOT/'phase13/results/all_gene_coordinate_coverage.csv.gz');genes=pd.read_csv(ROOT/'phase13/results/proposed_comparator_gene_sets.csv');q=genes.merge(context[['gene','entrez','chrom','position']],on='gene',validate='one_to_one').merge(coords,on='entrez',suffixes=('_retained','_recomputed'),validate='many_to_one');assert len(q)==67 and q.chrom_retained.eq(q.chrom_recomputed).all() and np.allclose(q.position_retained,q.position_recomputed,rtol=0,atol=0);q.to_csv(P/'data/coordinate_proxy_audit.csv',index=False)
+    (P/'qa/coordinate_provenance.json').write_text(json.dumps({'all_pass':True,'targets':len(q),'coordinate_source':str(source.relative_to(ROOT)),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'definition':'Median intended Brunello guide-cut coordinate per uniquely chromosome-mapped Entrez gene, used as a gene-location proxy. Not measured JUMP cut events or U2OS chromosome structure.','all_coordinates_reproduce_exactly':True,'fixed_comparator_membership_changed':False,'spatial_outcomes_read_by_this_script':False},indent=2));print('All67 gene-position proxies exactly reproduce the retained Brunello annotation')
+if __name__=='__main__':main()

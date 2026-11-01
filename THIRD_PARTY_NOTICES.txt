@@ -1,0 +1,31 @@
+Original analysis code: MIT, copyright 2026 Subhajit Dutta.
+Original derived release outputs: Creative Commons Attribution 4.0,
+https://creativecommons.org/licenses/by/4.0/ . These grants do not override
+the terms of upstream material bundled or referenced in this release.
+
+JUMP Cell Painting images and measurements (cpg0016-jump): Cell Painting
+Gallery, Broad Institute and JUMP consortium; CC0 1.0 as documented at
+https://registry.opendata.aws/cellpainting-gallery/ . Cite Chandrasekaran
+et al., Nature Methods 2025, DOI 10.1038/s41592-025-02753-9.
+
+JUMP experimental metadata: https://github.com/jump-cellpainting/datasets .
+The upstream BSD-3-Clause notice is retained in upstream_JUMP_LICENSE.txt.
+
+BBBC039v1 images and annotations: Broad Bioimage Benchmark Collection,
+https://bbbc.broadinstitute.org/BBBC039 , CC0 as stated on the resource page.
+Cite Caicedo et al., Cytometry A 2019, DOI 10.1002/cyto.a.23863.
+
+Public U2OS context data are identified by GEO accessions GSE226994,
+GSE232592, GSE290538, GSE283147 and GSE233195; DepMap 24Q4 DOI
+10.25452/figshare.plus.27993248; U2OS Cell Map DOI 10.18130/V3/164SI1;
+official HGNC and Brunello annotations; and the original publications in
+phase17/results/reference_checks_all_25.csv. Original data and metadata
+remain attributed to their providers. Their terms are not replaced by the
+license for this study's original code or derived tables.
+
+Cellpose-SAM software/model is not relicensed here. The retained checkpoint
+is referenced by identity and checksum rather than included. See the official
+MouseLand/cellpose repository and the cited Cellpose-SAM preprint.
+
+Crossref and PubMed records are retained for bibliographic verification,
+not as a substitute for publisher full text or scientific validation.
