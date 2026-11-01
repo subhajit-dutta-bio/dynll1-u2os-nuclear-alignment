@@ -1,0 +1,14 @@
+{
+  "all_pass": true,
+  "network_blocked": true,
+  "fresh_base_plus_overlay_extraction": true,
+  "commands": [
+    "phase18/audit_hif_coverage.py",
+    "phase18/plot_all.py"
+  ],
+  "archive_sha256": "a6c2372c269b98de1a789c7e3c94b5f924b9ce92cad5f98e4a528a7e1df72b23",
+  "all_88_panel_source_CSVs_reproduced": true,
+  "all_11_figure_PNGs_exactly_reproduced": true,
+  "full_raw_HIF_count_audit_and_diagnostics_reproduced": true,
+  "scope": "Correction-layer reproduction. The preserved base report separately documents the full primary statistical refit."
+}

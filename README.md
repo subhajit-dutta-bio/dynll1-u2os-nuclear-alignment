@@ -1,60 +1,18 @@
 # DYNLL1 targeting and nuclear alignment in U2OS
 
-DYNLL1 targeting and nuclear alignment in U2OS
-Release 1.0.0, 1 November 2026
-Author: Subhajit Dutta
+Current release: **1.0.1**, 1 November 2026. Data and correction: [Zenodo](https://doi.org/10.5281/zenodo.23856046).
 
-Data and reproducible analysis: https://doi.org/10.5281/zenodo.23850589
-Code mirror: https://github.com/subhajit-dutta-bio/dynll1-u2os-nuclear-alignment
+This release corrects label placement in Supplementary Figures 2A and 3D and adds explicit replicate-level denominator warnings to Supplementary Figure 5F. ACAAGAA Rep2 has raw High=1480 and Low=0; its displayed +10.9827 depends on a pseudocount and NTC centering. Its guide passes the original across-replicate rule, while this individual replicate has a zero denominator. All four such cells are flagged. All 12 original ratios, guide eligibility and primary spatial results are preserved.
 
-This is a descriptive reanalysis of public U2OS imaging. It measures local
-nuclear alignment after one DYNLL1 reagent pool alongside a telomeric 12q
-pattern. Independent targeting, rescue and the molecular mechanism remain
-unvalidated. Dates share reagents and controls; nuclei are not independent
-gene-level biological replicates. All selected genes, dates and nonconfirming
-outcomes are retained. The narrow two-date rank lead is not statistically
-resolved. Same-layout positions repeat across acquisition dates.
+Extract the unchanged v1.0.0 base ZIP and overlay the v1.0.1 correction ZIP into the same parent directory. Both use `dynll1-u2os-nuclear-alignment/` as their root. Then run:
 
-The Zenodo archive contains this code, complete focal/field inputs for the
-primary statistical analyses, source metadata, all retained estimates,
-profile-prediction inputs and folds, public-context results, all 88 panel
-source tables, 22 supplementary tables, figure exports and provenance.
-Editorial drafts and review correspondence are excluded. This release is
-data and analysis code, not a journal submission or a claim of acceptance.
+```sh
+python -X utf8 phase18/audit_hif_coverage.py
+python -X utf8 phase18/plot_all.py
+```
 
-Unzip the Zenodo archive and work inside dynll1-u2os-nuclear-alignment/.
-Install the dependencies from requirements.txt. CPU statistical reproduction
-does not require GPU inference or downloading the bulk JUMP image collection.
+See [correction details](phase18/README_correction.txt) and the [fresh offline reproduction report](phase18/qa/correction_offline_reproduction.json). The preserved [v1.0.0 dataset](https://doi.org/10.5281/zenodo.23850589) and commit cbca0c4a14e209c53ed81ad01633deefb68246a0 remain available. Original base-release instructions are in README.txt.
 
-Recompute all primary calibrations, six alignment definitions, shape and
-spacing diagnostics, matching diagnostics and grouped profile predictions:
-  python -X utf8 phase14/reproduce_numeric.py
+This is a descriptive reanalysis of public U2OS images. Independent targeting, rescue and the molecular mechanism remain unvalidated. Dates share reagents and controls. All selected genes, dates and nonconfirming outcomes are retained. The data release excludes manuscript drafts and private review correspondence.
 
-Recompute the plate/rank audit, cached reference audit and same-plate checks:
-  python -X utf8 phase17/audit_plate_and_rank.py
-  python -X utf8 phase17/audit_references.py
-  python -X utf8 phase17/same_plate_comparison.py
-
-Rebuild all 11 figures and their 88 source tables:
-  python -X utf8 phase17/plot_all.py
-
-The 25-entry reference matrix is phase17/results/reference_checks_all_25.csv.
-Nineteen journal papers have exact-DOI PubMed records plus publisher-deposited
-Crossref web metadata. Six resource/preprint entries have official-source
-checks. Cached records make the audit reproducible offline; --fetch is optional.
-
-For a cloned GitHub checkout, use the Zenodo archive to supply the data/results
-directories at the same relative paths. The archive also includes the exact
-code so it can be used without GitHub. The GitHub source mirror omits large
-data assets; the Zenodo archive is the canonical data distribution.
-
-Raw-image inference is a separate layer. The public JUMP URLs, raw hashes,
-checkpoint identity and settings are preserved in phase14. A small set of
-fixed display images and the CC0 BBBC039 reference archive support figure
-reproduction. Repeating all raw-pixel inference requires the public inputs,
-the documented Cellpose-SAM checkpoint and an appropriate GPU environment.
-
-See SHA256_MANIFEST.json for checksums and THIRD_PARTY_NOTICES.txt for source
-attribution. MIT applies to original analysis code; CC BY 4.0 applies to
-original derived release outputs. Upstream material retains its own terms.
-No credentials, private review correspondence or API access tokens are included.
+Original code is MIT licensed; original derived outputs are CC BY 4.0. Upstream source terms remain unchanged.
