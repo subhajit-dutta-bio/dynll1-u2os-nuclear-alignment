@@ -1,0 +1,66 @@
+{
+  "all_pass": true,
+  "archive_sha256": "b91457fe7682d97864c10c84ce623972a35022a5d244997b1064ff6264a62a04",
+  "files_verified": 8743,
+  "network_blocked": true,
+  "commands_reproduced": [
+    "phase19/audit_references.py",
+    "phase19/audit_hif_coverage.py",
+    "phase19/plot_all.py"
+  ],
+  "primary_statistical_refit": {
+    "all_pass": true,
+    "network_used": false,
+    "tables_compared": [
+      "phase14/results/adaptive_conditional_wells.csv",
+      "phase14/results/adaptive_unconditional_wells.csv",
+      "phase14/results/adjusted_alignment_fields.csv",
+      "phase14/results/alignment_contrasts.csv",
+      "phase14/results/alignment_covariate_correlations.csv",
+      "phase14/results/all_definition_gene_summary.csv",
+      "phase14/results/all_site_covariate_contrasts.csv",
+      "phase14/results/all_site_covariate_fields.csv",
+      "phase14/results/all_site_covariate_wells.csv",
+      "phase14/results/date_repeatability.csv",
+      "phase14/results/density_area_support.csv",
+      "phase14/results/descriptor_contrasts.csv",
+      "phase14/results/direct_matching_wells.csv",
+      "phase14/results/DYNLL1_comparator_date_contrasts.csv",
+      "phase14/results/field_descriptors.csv",
+      "phase14/results/fixed_conditional_wells.csv",
+      "phase14/results/fixed_unconditional_wells.csv",
+      "phase14/results/gene_context_and_covariates.csv",
+      "phase14/results/gene_summary.csv",
+      "phase14/results/leave_one_date_out_comparator_sensitivity.csv",
+      "phase14/results/matched_comparator_balance.csv",
+      "phase14/results/matching_covariate_balance.csv",
+      "phase14/results/matching_retention.csv",
+      "phase14/results/motor_module_dates.csv",
+      "phase14/results/raw_alignment_field_summary.csv",
+      "phase14/results/well_QC.csv",
+      "phase14/results/prediction/folds.csv",
+      "phase14/results/prediction/OOF_predictions.csv",
+      "phase14/results/prediction/profile_coverage.csv",
+      "phase14/results/prediction/summary.csv"
+    ],
+    "relative_tolerance": 1e-10,
+    "absolute_tolerance": 1e-10,
+    "scope": "Full new statistical calibration, all335 contrasts per model, comparator context and all nested predictions from complete focal/field inputs. Pixel inference is a separate layer."
+  },
+  "all_88_panel_sources_reproduced": true,
+  "all_22_supplementary_tables_verified": true,
+  "all_11_figure_PNGs_exactly_reproduced": true,
+  "reference_and_HIF_audits_reproduced": true,
+  "scope": "Scientific numeric and figure reproduction from a fresh self-contained distribution. Raw-pixel inference is a separate documented layer.",
+  "completed_core_refit_identity_proof": {
+    "source_archive_sha256": "050f054b6cdb94ce26a7741e7a4bd8529bb001b769605d5c468083a084dd2c00",
+    "all_other_distributed_files_byte_identical": true,
+    "changed_entries": [
+      "phase19/audit_references.py"
+    ],
+    "added_entries": [
+      "phase19/qa/README.txt"
+    ],
+    "scope": "Reuse is limited to the completed primary refit. The only code change creates the reference-audit output directory; a directory marker was added. Every core input, core script and original result file is byte-identical to the refitted candidate."
+  }
+}

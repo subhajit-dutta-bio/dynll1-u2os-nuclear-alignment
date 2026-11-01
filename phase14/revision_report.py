@@ -129,7 +129,7 @@ for regeneration, not the entire image collection.
 
 DOCUMENTS
   python phase14/build_documents.py
-DOCX authoring used the bundled Codex artifact Python. Native Word rendered
+DOCX authoring used the Python document runtime. Native Word rendered
 the final documents for page-by-page review after the packaged renderer
 reported that LibreOffice was unavailable. QA previews are internal and
 are excluded from the reading deliverables.

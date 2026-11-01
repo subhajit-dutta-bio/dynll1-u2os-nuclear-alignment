@@ -16,7 +16,7 @@ def references():
     10:'10. Harper NW, Birdsall GA, Honeywell ME, Ward KM, Pai AA, Lee MJ. RNA Pol II inhibition activates cell death independently from the loss of transcription. Cell. 2025;188(22):6301–6316.e29. https://doi.org/10.1016/j.cell.2025.07.034. Counts GSE283147.',
     11:'11. McDougal MB, DeMaria AM, Ohlson MB, Kumar A, Xing C, Schoggins JW. Interferon inhibits a model RNA virus via a limited set of inducible effector genes. EMBO Reports. 2023;24(9):e56901. https://doi.org/10.15252/embr.202356901. Counts GSE233195.',
     12:'12. DepMap Consortium. DepMap 24Q4 Public. https://doi.org/10.25452/figshare.plus.27993248. U2OS model ACH-000364 and screen SC-000364.AV01.',
-    14:'14. Cell Maps for Artificial Intelligence. U2OS protein-interaction release. https://doi.org/10.18130/V3/164SI1. Associated MassIVE resource MSV000097168 and NDEx network 95bc75d5-d1d1-11ee-8a40-005056ae23aa.',
+    14:'14. U2OS protein-interaction release. https://doi.org/10.18130/V3/164SI1. Associated MassIVE resource MSV000097168 and NDEx network 95bc75d5-d1d1-11ee-8a40-005056ae23aa.',
     17:'17. Caicedo JC et al. Evaluation of Deep Learning Strategies for Nucleus Segmentation in Fluorescence Images. Cytometry Part A. 2019;95(9):952–965. https://doi.org/10.1002/cyto.a.23863.',
     18:'18. HUGO Gene Nomenclature Committee. HGNC complete gene set. https://www.genenames.org/download/archive/. Retained complete-set annotation retrieved 30 October 2026.',
     19:'19. Pachitariu M, Rariden M, Stringer C. Cellpose-SAM: superhuman generalization for cellular segmentation. bioRxiv. 2025. https://doi.org/10.1101/2025.04.28.651001. Implementation Cellpose4.2.1.1 with the retained cpsam_v2 checkpoint; https://github.com/MouseLand/cellpose.',
